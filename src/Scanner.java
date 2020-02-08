@@ -24,6 +24,12 @@ public class Scanner {
         // ...
     }
 
+    public String STP() {
+        System.out.println("---------- " + yylex.yytext() + "---------");
+        return yylex.yytext();
+    }
+
+
     public String NextToken() throws Exception {
         String s = yylex.yylex();
         return s;

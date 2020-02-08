@@ -1,6 +1,6 @@
 public class Program {
     // Address of PGen output table.
-    public static final String stPath = "/home/qasem/Documents/Compiler_course/project/new_pgen/pgens/hello_world3.npt";
+    public static final String stPath = "/home/qasem/Documents/Compiler_course/project/new_pgen/pgens/hello_world4.npt";
 
     public static String inputPath = "/home/qasem/Documents/Compiler_course/project/s1.ppp";
     public static String outputPath = "";
