@@ -1,0 +1,5 @@
+2 3
+$ func MAIN 
+0 -1 NoSem 1 1 @push_func 0 -1 NoSem 
+5 -1 NoSem 0 -1 NoSem 0 -1 NoSem 
+
