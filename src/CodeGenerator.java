@@ -32,19 +32,19 @@ public class CodeGenerator {
         System.out.println(sem); // Just for debug
         switch (sem) {
 //            System.out.println(CODE.get(0));
-            case "@@push_func_name": {
+            case "@push_func_name": {
                 code = "@" + scanner.STP();
                 System.out.println(scanner.STP());
                 System.out.println(code);
                 ss.push(scanner.STP());
                 break;
             }
-            case "@@func_lparen": {
+            case "@func_lparen": {
                 code += "(";
                 ss.push("$");
                 break;
             }
-            case "@@func_rparen": {
+            case "@func_rparen": {
                 HashMap<String, Integer> arg = new HashMap<>();
                 while (true) {
                     String temp = ss.peek();
@@ -61,21 +61,21 @@ public class CodeGenerator {
                 }
                 break;
             }
-            case "@@func_ret_type": {
+            case "@func_ret_type": {
                 String ret = scanner.STP();
                 ss.push(ret);
-                System.out.println("a;jfahf " + ret);
+                System.out.println("a;jghbfahf " + ret);
                 code = "define " + llvmType.get(ret) + code;
                 CODE.add(code);
                 break;
             }
-            case "@@begin": {
+            case "@begin": {
                 CODE.add("{");
             }
             break;
-            case "@@end": {
+            case "@end": {
                 CODE.add("}");
-                System.out.println("===============" + code);
+                System.out.println("in @end code is: " + code);
             }
             break;
             case "NoSem": {
